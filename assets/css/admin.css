@@ -1,0 +1,493 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+background-color: #e8d9b5;
+  color: #3D1509;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+hr {
+  border:none;
+  height: 20px;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid #3D1509;
+  box-shadow: 0 20px 20px -20px #3D1509;
+  margin: -50px auto 10px; 
+}
+table{
+border-collapse: collapse;
+width: 100%; 
+
+}
+th{
+  border-bottom: 1px solid #ce4920;
+  border-top: 1px solid #ce4920;
+  text-align: center;
+  color: #ce4920;
+}
+td{
+color: #3D1509;
+border-bottom: 1px solid #ce4920;
+text-align: center;
+
+}
+td,th{
+  height: 30px;
+  vertical-align: middle;
+  padding: 10px;  
+}
+.sidenav {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3D1509;
+  overflow-x: hidden;
+  padding-top:130px;
+}
+
+.sidenav a {
+  padding: 15px 8px 25px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ce4920;
+}
+
+.main {
+  margin-left: 170px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 15px;}
+}
+
+
+.button_e {
+  border-radius: 4px;
+  background-color: #ce4920;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+.button_c {
+  border-radius: 25px;
+  background-color: #ce4920;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 130px;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+.button_d {
+  border-radius: 4px;
+  background-color: #8F0B0B;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+.button_a {
+  border-radius: 4px;
+  background-color: #3D1509;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  width: 190px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+  button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #ce4920;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #3D1509;
+  border-top-color: #f9963b;
+  border-bottom-color: #f9963b;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  border: 2px solid #ce4920;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #ce4920;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #ce4920;
+  color: #ce4920;
+}
+
+.back-to-top:hover i {
+  color: #444444;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+
+
+.col-85 {
+  width: 85%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+.imglog{
+display: inline-block;
+float: right;
+width: 210px;
+height: 70px;
+filter:contrast(150%);
+padding-right: 150px;
+}
+.zoom {
+  padding: 50px;
+  background-color: peru;
+  width: 100px;
+  height: 130px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+
+
+
+
+  .php-edit-form input{
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: #0c0b09;
+  border-color: #625b4b;
+  color: white;
+}
+
+.php-edit-form input::-webkit-input-placeholder{
+  color: #a49b89;
+}
+
+.php-edit-form input::-moz-placeholder{
+  color: #a49b89;
+}
+
+.php-edit-form input::placeholder{
+  color: #a49b89;
+}
+
+.php-edit-form input:focus{
+  border-color: #cda45e;
+}
+
+.php-edit-form input {
+  height: 44px;
+}
+
+.php-edit-form input[type="submit"] {
+  background: #cda45e;
+  border: 0;
+  padding: 10px 35px;
+  color: #3D1509;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.php-edit-form input[type="submit"]:hover {
+  background: #d3af71;
+}
+
+
+
+input[type=text] ,
+input[type=password], textarea{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 15px;
+  background-color: #d3af71;
+  color: #3D1509;
+  border-radius: 8px;
+}
+
+.cbody{
+  width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c46d3b;
+    color: #3D1509;
+}
+
+.containers .login-text {
+    color: #3D1509;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.containers .login-social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    margin-bottom: 25px;
+}
+
+.containers .login-social a {
+    padding: 12px;
+    margin: 15px;
+    margin-top: 50px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFF;
+    transition: .3s;
+}
+
+.containers .login-social a i {
+    margin-right: 10px;
+}
+
+
+.containers .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.containers .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3D1509;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.5);
+    outline: none;
+    transition: .3s;
+}
+
+.containers .login-email .input-group input:focus, .containers .login-email .input-group input:valid {
+    border-color: #f9963b;
+}
+
+.containers .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #f9963b;
+    outline: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: #3D1509;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.containers .login-email .input-group .btn:hover {
+    transform: translateY(-3px);
+    background: #ce4920;
+}
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(255,194,100, 0.1);
+  transition: all ease-in-out 0.3s;
+  background: #964315;
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255,228,196, 1.0);
+}
+
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.why-us .box p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.why-us .box:hover {
+  background: #cda45e;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.why-us .box:hover span, .why-us .box:hover h4, .why-us .box:hover p {
+  color: #3D1509;
+}
